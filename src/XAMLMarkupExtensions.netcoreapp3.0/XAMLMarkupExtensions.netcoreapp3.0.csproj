@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>WPFLocalizationExtension</RootNamespace>
+    <UseWPF>true</UseWPF>
+    
+    <AssemblyTitle>XAMLMarkupExtensions.NetCore3.0</AssemblyTitle>
+    <AssemblyName>XAMLMarkupExtensions.NetCore3.0</AssemblyName>
+
+    <Version>$(GitVersion_NuGetVersion)</Version>
+    <Version>1.6.0</Version>
+    
+    <Company />
+    <Product>XAML Markup Extensions (.Net Core 3.0)</Product>
+    <Authors>Uwe Mayer,Konrad Mattheis,Bernhard Millauer,Axel Eckenberger</Authors>
+    <RepositoryUrl>https://github.com/Obalix/XAMLMarkupExtensions.git</RepositoryUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/XAMLMarkupExtensions/XAMLMarkupExtensions/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Obalix/XAMLMarkupExtensions.git</PackageProjectUrl>
+    <Copyright>Uwe Mayer, Konrad Mattheis, Bernhard Millauer, Axel Eckenberger</Copyright>
+    <Description>A base class for nested markup extensions and a collection of useful extensions for WPF 3.5 and 4.x.</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageTags>WPF markup extension nesting</PackageTags>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <PublicSign>true</PublicSign>
+    <AssemblyOriginatorKeyFile>public.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Base\DependencyObjectHelper.cs" Link="Base\DependencyObjectHelper.cs" />
+    <Compile Include="..\Base\EndpointReachedEventArgs.cs" Link="Base\EndpointReachedEventArgs.cs" />
+    <Compile Include="..\Base\INestedMarkupExtension.cs" Link="Base\INestedMarkupExtension.cs" />
+    <Compile Include="..\Base\NestedMarkupExtension.cs" Link="Base\NestedMarkupExtension.cs" />
+    <Compile Include="..\Base\NullExtension.cs" Link="Base\NullExtension.cs" />
+    <Compile Include="..\Base\ObjectDependencyManager.cs" Link="Base\ObjectDependencyManager.cs" />
+    <Compile Include="..\Base\ParentChangedNotifier.cs" Link="Base\ParentChangedNotifier.cs" />
+    <Compile Include="..\Base\SimpleProvideValueServiceProvider.cs" Link="Base\SimpleProvideValueServiceProvider.cs" />
+    <Compile Include="..\Base\StaticExtension.cs" Link="Base\StaticExtension.cs" />
+    <Compile Include="..\Base\TargetInfo.cs" Link="Base\TargetInfo.cs" />
+    <Compile Include="..\Base\TargetPath.cs" Link="Base\TargetPath.cs" />
+    <Compile Include="..\Base\TupleNET35.cs" Link="Base\TupleNET35.cs" />
+    <Compile Include="..\Base\TypeExtension.cs" Link="Base\TypeExtension.cs" />
+    <Compile Include="..\Binding\BindingProxy.cs" Link="Binding\BindingProxy.cs" />
+    <Compile Include="..\Binding\DynBindingExtension.cs" Link="Binding\DynBindingExtension.cs" />
+    <Compile Include="..\Design\AlternatingGridColorExtension.cs" Link="Design\AlternatingGridColorExtension.cs" />
+    <Compile Include="..\Strings\CatExtension.cs" Link="Strings\CatExtension.cs" />
+    <Compile Include="..\XmlnsDefinitions.cs" Link="XmlnsDefinitions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitVersionTask" Version="4.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19367-01">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
